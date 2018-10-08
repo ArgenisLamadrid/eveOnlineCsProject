@@ -1,0 +1,48 @@
+#itemBlock{
+    margin:10px 0px 20px 0px;
+    
+}
+#itemImg{
+
+    height: 128px;
+    width:128px;
+}
+#playerCount{
+    color: rgb(250, 250, 250);
+}
+#title{
+    color: rgb(250, 250, 250);
+    
+}
+#markLogo{
+    font-size: 40px;
+    
+}
+#serverTime{
+    color: rgb(250, 250, 250);
+}
+
+#plexPriceTickerInfo{
+    color: yellow;
+    font-size: 20px;
+
+}
+#plexPriceTickerInfo
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.nav-link{
+    font-size: 30px;
+}
+
+.tickerInfo{
+    color: green;
+    font-size: 20px;
+}
+
+body{
+    font-family: Verdana, Geneva, sans-serif;
+    
+}

@@ -1,0 +1,252 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>EveMark</title>
+  <meta name="description" content="Eve Online Death Tracker">
+  <meta name="author" content="Argenis Lamadrid">
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+  <link rel="icon" href="images.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="mainPageStyleSheet.css">
+</head>
+
+<div class="fluid-container">
+    <H1 id="title"class="text-centered ">EveMark</H1>
+
+  <body style="background:url(EVE_Online_Background_EVE_Online_Odyssey.jpg)">
+    
+    <div class="row">
+      <h5 id="playerCount"class="col-lg-5 text-capitalize "></h5>
+      </div>
+    <div class="row">
+      <h5 id="serverTime"class="col-lg-5 text-capitalize "></h5>
+      </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a id="markLogo" class="navbar-brand" href="mainPage.html">Mark</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="ItemPage.html">Items<span class="sr-only">(current)</span></a>
+                </li>
+          </ul>
+          <marquee id="plexPriceTickerInfo" behavior="scroll" direction="left"> Plex Prices  
+                
+              <span class="tickerInfo">Jita: Ƶ</span>
+              <span class="tickerInfo">Amarr: Ƶ</span>
+              <span class="tickerInfo">Rens: Ƶ</span>
+              <span class="tickerInfo">Dodixie: Ƶ</span>
+              <span class="tickerInfo">Hek: Ƶ</span>
+          
+           </marquee>
+          <div id="searchBarBackground" class="form-inline my-2 my-lg-0">
+            <input id="searchBar" class="form-control mr-sm-2" type="search" placeholder="Character Name" aria-label="Search">
+          </div>
+          <button id="submitBtn" class="btn btn-outline-info my-2 my-sm-0" type="input">Search</button>
+        </div>
+      </nav>
+    <div  class="row">
+          <div class="col align-left">
+              <table id ="oreTable"class="table table-sm table-dark table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ore</th>
+                      <th scope="col">Jita</th>
+                      <th scope="col">Amarr</th>
+                      <th scope="col">Rens</th>
+                      <th scope="col">Doxidie</th>
+                      <th scope="col">Hek</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr >
+                      <th id="veldsparColumn"scope="row">Veldspar</th>
+                      <td id="veldsparJP"class="orePrices">JitaPrice</td>
+                      <td id="veldsparAP"class="orePrices">AmarrPrice</td>
+                      <td id="veldsparRP"class="orePrices">RensPrice</td>
+                      <td id="veldsparDP"class="orePrices">DoxidiePrice</td>
+                      <td id="veldsparHP"class="orePrices">HekPrice</td>
+                    <tr>
+                      <th id="scorditeColumn"scope="row">Scordite</th>
+                      <td id="scorditeJP"class="orePrices">JitaPrice</td>
+                      <td id="scorditeAP"class="orePrices">AmarrPrice</td>
+                      <td id="scorditeRP"class="orePrices">RensPrice</td>
+                      <td id="scorditeDP"class="orePrices">DoxidiePrice</td>
+                      <td id="scorditeHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="pyroxeresColumn"scope="row">Pyroxeres</th>
+                      <td id="pyroxeresJP"class="orePrices">JitaPrice</td>
+                      <td id="pyroxeresAP"class="orePrices">AmarrPrice</td>
+                      <td id="pyroxeresRP"class="orePrices">RensPrice</td>
+                      <td id="pyroxeresDP"class="orePrices">DoxidiePrice</td>
+                      <td id="pyroxeresHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="plagioclaseColumn"scope="row">Plagioclase</th>
+                      <td id="plagioclaseJP"class="orePrices">JitaPrice</td>
+                      <td id="plagioclaseAP"class="orePrices">AmarrPrice</td>
+                      <td id="plagioclaseRP"class="orePrices">RensPrice</td>
+                      <td id="plagioclaseDP"class="orePrices">DoxidiePrice</td>
+                      <td id="plagioclaseHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="omberColumn"scope="row">Omber</th>
+                      <td id="omberJP"class="orePrices">JitaPrice</td>
+                      <td id="omberAP"class="orePrices">AmarrPrice</td>
+                      <td id="omberRP"class="orePrices">RensPrice</td>
+                      <td id="omberDP"class="orePrices">DoxidiePrice</td>
+                      <td id="omberHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="kerniteColumn"scope="row">Kernite</th>
+                      <td id="kerniteJP"class="orePrices">JitaPrice</td>
+                      <td id="kerniteAP"class="orePrices">AmarrPrice</td>
+                      <td id="kerniteRP"class="orePrices">RensPrice</td>
+                      <td id="kerniteDP"class="orePrices">DoxidiePrice</td>
+                      <td id="kerniteHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="jaspetColumn"scope="row">Jaspet</th>
+                      <td id="jaspetJP"class="orePrices">JitaPrice</td>
+                      <td id="jaspetAP"class="orePrices">AmarrPrice</td>
+                      <td id="jaspetRP"class="orePrices">RensPrice</td>
+                      <td id="jaspetDP"class="orePrices">DoxidiePrice</td>
+                      <td id="jaspetHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="hemorphiteColumn"scope="row">Hemorphite</th>
+                      <td id="hemorphiteJP"class="orePrices">JitaPrice</td>
+                      <td id="hemorphiteAP"class="orePrices">AmarrPrice</td>
+                      <td id="hemorphiteRP"class="orePrices">RensPrice</td>
+                      <td id="hemorphiteDP"class="orePrices">DoxidiePrice</td>
+                      <td id="hemorphiteHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="hedbergiteColumn"scope="row">Hedbergite</th>
+                      <td id="hedbergiteJP"class="orePrices">JitaPrice</td>
+                      <td id="hedbergiteAP"class="orePrices">AmarrPrice</td>
+                      <td id="hedbergiteRP"class="orePrices">RensPrice</td>
+                      <td id="hedbergiteDP"class="orePrices">DoxidiePrice</td>
+                      <td id="hedbergiteHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="gneissColumn"scope="row">Gneiss</th>
+                      <td id="gneissJP"class="orePrices">JitaPrice</td>
+                      <td id="gneissAP"class="orePrices">AmarrPrice</td>
+                      <td id="gneissRP"class="orePrices">RensPrice</td>
+                      <td id="gneissDP"class="orePrices">DoxidiePrice</td>
+                      <td id="gneissHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="dOchreColumn"scope="row">Dark Ochre</th>
+                      <td id="dOchreJP"class="orePrices">JitaPrice</td>
+                      <td id="dOchreAP"class="orePrices">AmarrPrice</td>
+                      <td id="dOchreRP"class="orePrices">RensPrice</td>
+                      <td id="dOchreDP"class="orePrices">DoxidiePrice</td>
+                      <td id="dOchreHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="spodumainColumn"scope="row">Spodumain</th>
+                      <td id="spodumainJP"class="orePrices">JitaPrice</td>
+                      <td id="spodumainAP"class="orePrices">AmarrPrice</td>
+                      <td id="spodumainRP"class="orePrices">RensPrice</td>
+                      <td id="spodumainDP"class="orePrices">DoxidiePrice</td>
+                      <td id="spodumainHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="crokiteColumn"scope="row">Crokite</th>
+                      <td id="crokiteJP"class="orePrices">JitaPrice</td>
+                      <td id="crokiteAP"class="orePrices">AmarrPrice</td>
+                      <td id="crokiteRP"class="orePrices">RensPrice</td>
+                      <td id="crokiteDP"class="orePrices">DoxidiePrice</td>
+                      <td id="crokiteHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="arkonorColumn"scope="row">Arkonor</th>
+                      <td id="arkonorJP"class="orePrices">JitaPrice</td>
+                      <td id="arkonorAP"class="orePrices">AmarrPrice</td>
+                      <td id="arkonorRP"class="orePrices">RensPrice</td>
+                      <td id="arkonorDP"class="orePrices">DoxidiePrice</td>
+                      <td id="arkonorHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="bistotColumn"scope="row">Bistot</th>
+                      <td id="bistotJP"class="orePrices">JitaPrice</td>
+                      <td id="bistotAP"class="orePrices">AmarrPrice</td>
+                      <td id="bistotRP"class="orePrices">RensPrice</td>
+                      <td id="bistotDP"class="orePrices">DoxidiePrice</td>
+                      <td id="bistotHP"class="orePrices">HekPrice</td>
+                    </tr>
+                    <tr>
+                      <th id="mercoxitColumn"scope="row">Mercoxit</th>
+                      <td id="mercoxitJP"class="orePrices">JitaPrice</td>
+                      <td id="mercoxitAP"class="orePrices">AmarrPrice</td>
+                      <td id="mercoxitRP"class="orePrices">RensPrice</td>
+                      <td id="mercoxitDP"class="orePrices">DoxidiePrice</td>
+                      <td id="mercoxitHP"class="orePrices">HekPrice</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div >
+          <div id="charSec"class="col align-right table-responsive">
+            <table class="table table-dark table-lg">
+              <tbody>
+                <tr>
+                  <td id ="charImg" >
+                    <img id="charPortrait"src="https://image.eveonline.com/Character/96829370_128.jpg">
+                  </td>
+                  
+                  <td id="charTable">
+                    <div class="pull-right">
+                        <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Stats</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Name: </th>
+                               <td class="charInfo">stuff here</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Corp: </th>
+                               <td class="charInfo">stuff here</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Kills: </th>
+                                <td class="charInfo">stuff here</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Losses: </th>
+                                <td class="charInfo">stuff here</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">KDR: </th>
+                                <td class="charInfo">stuff here</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                        
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+
+    <script src="plexTicker.js"></script>
+    <script src="oreData.js"></script>
+    <script src="serverTimePlayerTicker.js"></script>
+    <script src="charSearch.js"></script>
+  </body>
+</div>
+</html>
